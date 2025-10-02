@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y wget
-          wget -qO trivy.tar.gz https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.51.1_Linux-64bit.tar.gz
+          wget -qO trivy.tar.gz wget -qO trivy.tar.gz https://github.com/aquasecurity/trivy/releases/download/v0.67.0/trivy_0.67.0_Linux-64bit.tar.gz
           if [ $? -ne 0 ]; then echo "Failed to download Trivy"; exit 1; fi
           tar zxvf trivy.tar.gz
           if [ $? -ne 0 ]; then echo "Failed to extract Trivy"; exit 1; fi
